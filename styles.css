@@ -39,8 +39,26 @@ main {
   padding: 20px;
 }
 
-section {
-  margin-bottom: 40px;
+/* Landing Page Styles */
+.landing {
+  text-align: center;
+}
+
+.landing-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profile-picture img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.bio {
+  max-width: 600px;
 }
 
 /* Footer Styles */
