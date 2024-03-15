@@ -50,6 +50,10 @@ main {
   align-items: center;
 }
 
+.profile-picture {
+  text-align: center;
+}
+
 .profile-picture img {
   width: 200px;
   height: 200px;
