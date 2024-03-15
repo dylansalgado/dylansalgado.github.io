@@ -39,26 +39,37 @@ main {
   padding: 20px;
 }
 
-/* Landing Page Styles */
-.landing {
+/* Slideshow Styles */
+.slideshow {
   text-align: center;
 }
 
-.landing-content {
+.slideshow-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-.profile-picture img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  margin-bottom: 20px;
+.slide {
+  margin: 10px;
+  max-width: 300px;
 }
 
+.slide img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.slide-caption {
+  margin-top: 5px;
+}
+
+/* Bio Section Styles */
 .bio {
-  max-width: 600px;
+  text-align: center;
+  margin-top: 40px;
 }
 
 /* Footer Styles */
