@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
   var resumeContentElement = document.getElementById('resume-content');
   var downloadLinkElement = document.getElementById('download-link');
 
-  // Path to your resume text file
-  var resumePath = 'Media/my_resume.docx';  // Update this path if needed
+  // Path to your resume HTML file
+  var resumePath = 'Media/my_resume.html';  // Update this path if needed
 
   // Fetch and display resume content
   fetch(resumePath)
@@ -14,11 +14,14 @@ document.addEventListener('DOMContentLoaded', function() {
       return response.text();
     })
     .then(text => {
-      resumeContentElement.textContent = text;  // Display text content
-      downloadLinkElement.href = resumePath;     // Set the download link href
+      resumeContentElement.innerHTML = text;  // Insert HTML content
     })
     .catch(error => {
       console.error('There was a problem with the fetch operation:', error);
       resumeContentElement.textContent = 'Failed to load resume content.';
     });
+
+  // Set the download link href
+  downloadLinkElement.href = 'Media/Fun Projects/Resume/my_resume.docx'; // Update this path if needed
 });
+
