@@ -27,6 +27,10 @@ var soundFiles = [
 // Function to create a button for each sound file
 function createSoundButtons() {
   var soundboard = document.getElementById('soundboard');
+  if (!soundboard) {
+    console.error('Soundboard element not found');
+    return;
+  }
 
   soundFiles.forEach(function(sound) {
     // Extract the file name by removing the directory path and '.mp3' extension
