@@ -1,4 +1,6 @@
-// Array containing paths to your sound files
+// Path to the folder containing sound files
+var folderPath = 'Media/Fun Projects/Random Noises/';
+// Array containing paths to sound files
 var soundFiles = [
   'Media/Fun Projects/Random Noises/among-us-role-reveal-sound.mp3',
   'Media/Fun Projects/Random Noises/anime-wow-sound-effect.mp3',
@@ -21,21 +23,24 @@ var soundFiles = [
   'Media/Fun Projects/Random Noises/skibidi-toilet.mp3',
   'Media/Fun Projects/Random Noises/vine-boom.mp3',
   'Media/Fun Projects/Random Noises/wrong-answer-sound-effect.mp3',
-  // Add more sound eventually
+  // Add more sound file paths eventually
 ];
 
 // Function to create a button for each sound file
 function createSoundButtons() {
   var soundboard = document.getElementById('soundboard');
 
-  soundFiles.forEach(function(sound, index) {
+  soundFiles.forEach(function(sound) {
+    // Extract the file name without extension
+    var soundName = sound.replace('.mp3', '');
+
     // Create a new button element
     var button = document.createElement('button');
-    button.innerText = `Sound ${index + 1}`;
+    button.innerText = soundName;
     
     // Add an event listener to play the sound when the button is clicked
     button.addEventListener('click', function() {
-      var audio = new Audio(sound);
+      var audio = new Audio(folderPath + sound);
       audio.play();
     });
     
@@ -45,4 +50,4 @@ function createSoundButtons() {
 }
 
 // Call the function to create the buttons when the page loads
-window.onload = createSoundButtons;
+createSoundButtons();
