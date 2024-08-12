@@ -31,16 +31,16 @@ function createSoundButtons() {
   var soundboard = document.getElementById('soundboard');
 
   soundFiles.forEach(function(sound) {
-    // Extract the file name without extension
-    var soundName = sound.replace('.mp3', '');
+    // Extract the file name from the full path and remove the '.mp3' extension
+    var soundName = sound.split('/').pop().replace('.mp3', '');
 
     // Create a new button element
     var button = document.createElement('button');
-    button.innerText = soundName;
+    button.innerText = soundName; // Set the button text to the sound name
     
     // Add an event listener to play the sound when the button is clicked
     button.addEventListener('click', function() {
-      var audio = new Audio(folderPath + sound);
+      var audio = new Audio(sound);
       audio.play();
     });
     
@@ -50,4 +50,4 @@ function createSoundButtons() {
 }
 
 // Call the function to create the buttons when the page loads
-createSoundButtons();
+createSoundButtons();;
