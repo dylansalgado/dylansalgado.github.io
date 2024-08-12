@@ -22,6 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
   // Set the download link href
-  downloadLinkElement.href = 'Media/Fun Projects/Resume/my_resume.docx'; // Update this path if needed
+  downloadLinkElement.href = 'Media/DylanSalgadoResume.html';
 });
 
