@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var downloadLinkElement = document.getElementById('download-link');
 
   // Path to your resume text file
-  var resumePath = 'Media/Fun Projects/Resume/my_resume.txt';  // Update this path if needed
+  var resumePath = 'Media/my_resume.docx';  // Update this path if needed
 
   // Fetch and display resume content
   fetch(resumePath)
