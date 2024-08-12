@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   var resumeContentElement = document.getElementById('resume-content');
   var downloadLinkElement = document.getElementById('download-link');
-
-  // Path to your resume HTML file
-  var resumePath = 'Media/Fun Projects/Resume/my_resume.html';  // Update this path if needed
+  var resumePath = 'Media/DylanSalgadoResume.html';  // Update this path if needed
 
   // Fetch and display resume content
   fetch(resumePath)
@@ -22,6 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
   // Set the download link href
-  downloadLinkElement.href = 'Media/Fun Projects/Resume/my_resume.docx'; // Update this path if needed
+  downloadLinkElement.href = 'Media/DylanSalgadoResume.html'; // Update this path if needed
 });
 
