@@ -13,6 +13,11 @@ header {
   padding: 20px 0;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 2em; /* Adjust size as needed */
+}
+
 nav ul {
   list-style-type: none;
   margin: 0;
