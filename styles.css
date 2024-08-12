@@ -13,22 +13,6 @@ header {
   padding: 20px 0;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2em;
-}
-
-/* Reset any conflicting styles from resume content */
-main h1 {
-  color: #fff; /* Ensure the color matches the header text color */
-  text-align: center; /* Center-align the text */
-}
-
-/* Additional styling to ensure headers are consistent */
-main h2 {
-  color: #333;
-}
-
 nav ul {
   list-style-type: none;
   margin: 0;
