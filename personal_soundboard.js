@@ -1,5 +1,3 @@
-// Path to the folder containing sound files
-var folderPath = 'Media/Fun Projects/Random Noises/';
 // Array containing paths to sound files
 var soundFiles = [
   'Media/Fun Projects/Random Noises/among-us-role-reveal-sound.mp3',
