@@ -32,7 +32,7 @@ function createSoundButtons() {
 
   soundFiles.forEach(function(sound) {
     // Extract the file name from the full path and remove the '.mp3' extension
-    var soundName = sound.split('/').pop().replace('.mp3', '');
+    var soundName = sound.split('Media/Fun Projects/Random Noises/').pop().replace('.mp3', '');
 
     // Create a new button element
     var button = document.createElement('button');
