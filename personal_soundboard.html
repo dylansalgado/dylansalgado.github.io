@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Soundboard</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- You can link your JavaScript file here if needed -->
 </head>
 <body>
   <header>
@@ -18,29 +17,13 @@
       <li><a href="side_projects.html">Fun Side Projects</a></li>
     </ul>
   </nav>
-  <main>
-    <div class="sound-button" data-sound="sound1">
-      <button onclick="playSound('sound1')">Sound 1</button>
-    </div>
-    <div class="sound-button" data-sound="sound2">
-      <button onclick="playSound('sound2')">Sound 2</button>
-    </div>
-    <div class="sound-button" data-sound="sound3">
-      <button onclick="playSound('sound3')">Sound 3</button>
-    </div>
-    <!-- Add more buttons as needed -->
+  <main id="soundboard">
+    <!-- Buttons for each sound will be dynamically generated here -->
   </main>
   <footer>
     <p>&copy; 2024 Dylan Salgado. All rights reserved.</p>
   </footer>
-  
-  <!-- JavaScript for playing sounds -->
-  <script>
-    function playSound(sound) {
-      // Replace placeholder sound file references with actual paths to your sound files
-      var audio = new Audio('placeholder_sound_' + sound.slice(-1) + '.mp3');
-      audio.play();
-    }
-  </script>
+  <script src="personal_soundboard.js"></script>
 </body>
 </html>
+
