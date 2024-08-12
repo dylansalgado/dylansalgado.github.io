@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var downloadLinkElement = document.getElementById('download-link');
 
   // Path to your resume HTML file
-  var resumePath = 'Media/my_resume.html';  // Update this path if needed
+  var resumePath = 'Media/DylanSalgadoResume.html';  // Update this path if needed
 
   // Fetch and display resume content
   fetch(resumePath)
