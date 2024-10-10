@@ -118,8 +118,8 @@ footer {
 
 /* Style for the sound buttons */
 .sound-button {
-  width: 100px;    /* Width of the round button */
-  height: 100px;   /* Height of the round button */
+  width: 200px;    /* Width of the round button */
+  height: 200px;   /* Height of the round button */
   border-radius: 50%; /* Makes the button round */
   background-color: #007BFF; /* Blue color */
   border: none;
