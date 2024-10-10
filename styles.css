@@ -106,23 +106,36 @@ footer {
 #soundboard {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centers the buttons horizontally */
-  gap: 10px; /* Adds space between buttons */
-  padding: 20px; /* Optional padding for the soundboard area */
+  justify-content: center; /* Center the buttons */
+  gap: 20px; /* Space between buttons */
+  padding: 20px;
 }
 
-/* Style soundboard buttons */
-#soundboard button {
-  padding: 10px 20px;
-  font-size: 16px;
-  border-radius: 5px;
+/* Container for each sound button and its label */
+.sound-container {
+  text-align: center;
+}
+
+/* Style for the sound buttons */
+.sound-button {
+  width: 100px;    /* Width of the round button */
+  height: 100px;   /* Height of the round button */
+  border-radius: 50%; /* Makes the button round */
+  background-color: #007BFF; /* Blue color */
   border: none;
-  background-color: #007BFF;
-  color: white;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
-#soundboard button:hover {
+/* Button hover effect */
+.sound-button:hover {
   background-color: #0056b3;
+}
+
+/* Style for the label below the button */
+.sound-label {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333; /* Label text color */
+  text-transform: uppercase;
 }
