@@ -14,32 +14,18 @@ function createSoundButtons() {
         // Extract the file name by removing the '.mp3' extension
         var soundName = sound.replace('.mp3', '').replace(/-/g, ' ').toUpperCase();
 
-        // Create a new div to hold the button and the label
-        var soundContainer = document.createElement('div');
-        soundContainer.classList.add('sound-container'); // For styling
-
         // Create the button element
         var button = document.createElement('button');
-        button.classList.add('sound-button'); // For styling
-        button.innerText = ''; // Clear any inner text (visual button only)
-
+        button.innerText = soundName; // Set the button text to the formatted name
+        
         // Add an event listener to play the sound when the button is clicked
         button.addEventListener('click', function() {
           var audio = new Audio('Media/Fun Projects/Soundboard/' + sound);
           audio.play();
         });
 
-        // Create the label below the button
-        var label = document.createElement('p');
-        label.classList.add('sound-label'); // For styling
-        label.innerText = soundName;
-
-        // Append the button and label to the container
-        soundContainer.appendChild(button);
-        soundContainer.appendChild(label);
-
-        // Append the container to the soundboard section
-        soundboard.appendChild(soundContainer);
+        // Append the button to the soundboard section
+        soundboard.appendChild(button);
       });
     })
     .catch(error => console.error('Error fetching sound files:', error));
