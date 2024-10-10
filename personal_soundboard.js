@@ -12,14 +12,17 @@ var soundFiles = [
   'Media/Fun Projects/Random Noises/discord-notification.mp3',
   'Media/Fun Projects/Random Noises/downer-noise.mp3',
   'Media/Fun Projects/Random Noises/error.mp3',
+  'Media/Fun Projects/Random Noises/Excuse me I need your help.mp3',
   'Media/Fun Projects/Random Noises/gnome-woo-reverb.mp3',
   'Media/Fun Projects/Random Noises/goofy-ahh-car-horn-sound-effect.mp3',
   'Media/Fun Projects/Random Noises/jixaw-metal-pipe-falling-sound.mp3',
+  'Media/Fun Projects/Random Noises/Ladies and Gentlemen we got him.mp3',
   'Media/Fun Projects/Random Noises/minecraft-villager-sound-effect.mp3',
   'Media/Fun Projects/Random Noises/pikmin-gcn.mp3',
   'Media/Fun Projects/Random Noises/roblox-death-sound.mp3',
   'Media/Fun Projects/Random Noises/skibidi-toilet.mp3',
   'Media/Fun Projects/Random Noises/vine-boom.mp3',
+  'Media/Fun Projects/Random Noises/Wow Owen Wilson.mp3',
   'Media/Fun Projects/Random Noises/wrong-answer-sound-effect.mp3',
   // Add more sound file paths eventually
 ];
