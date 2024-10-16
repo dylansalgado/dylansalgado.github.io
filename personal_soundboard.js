@@ -74,7 +74,6 @@ function createStopAllButton() {
 
   // Create the stop button element
   var stopButton = document.createElement('button');
-  stopButton.innerText = 'Stop All Sounds';
 
   // Add event listener to stop all sounds
   stopButton.addEventListener('click', stopAllSounds);
