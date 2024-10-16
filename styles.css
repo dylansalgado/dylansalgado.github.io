@@ -127,6 +127,12 @@ footer {
   background-color: #0056b3;
 }
 
+/* Stop Button Container Styles */
+.stop-button-container {
+  text-align: center;  /* Center the button */
+}
+
+/* Stop Button Styles */
 #soundboard button.stop {
   margin-top: 20px;  /* Space above the button */
   background-color: red;  /* Button color */
