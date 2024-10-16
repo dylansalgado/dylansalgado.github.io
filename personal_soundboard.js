@@ -75,9 +75,6 @@ function createStopAllButton() {
   // Create the stop button element
   var stopButton = document.createElement('button');
   stopButton.innerText = 'Stop All Sounds';
-  stopButton.style.marginTop = '20px';  // Add some space above the button
-  stopButton.style.backgroundColor = 'red'; // Set button color to red
-  stopButton.style.color = 'white'; // Set text color to white
 
   // Add event listener to stop all sounds
   stopButton.addEventListener('click', stopAllSounds);
