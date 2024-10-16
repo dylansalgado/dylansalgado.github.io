@@ -1,7 +1,7 @@
 var playingSounds = {};
 
 // Fetch sound files from JSON and create sound buttons
-fetch('sounds.json')
+fetch('Media/Fun Projects/Soundboard/sounds.json')
   .then(response => response.json())
   .then(soundFiles => {
     createSoundButtons(soundFiles);  // Pass the sound files to the button creation function
