@@ -1,42 +1,45 @@
-// Array containing paths to sound files
-var soundFiles = [
-  'Media/Fun Projects/Soundboard/among-us-role-reveal-sound.mp3',
-  'Media/Fun Projects/Soundboard/anime-wow-sound-effect.mp3',
-  // Add more sound file paths
-];
-
-// Store references to playing audio elements
 var playingSounds = {};
 
+// Fetch sound files from JSON and create sound buttons
+fetch('sounds.json')
+  .then(response => response.json())
+  .then(soundFiles => {
+    createSoundButtons(soundFiles);  // Pass the sound files to the button creation function
+    createStopAllButton();  // Create "Stop All Sounds" button after the sound buttons
+  })
+  .catch(error => {
+    console.error('Error fetching sound files:', error);
+  });
+
 // Function to create a button for each sound file
-function createSoundButtons() {
+function createSoundButtons(soundFiles) {
   var soundboard = document.getElementById('soundboard');
   if (!soundboard) {
     console.error('Soundboard element not found');
     return;
   }
 
+  // Loop through the dynamically loaded sound files
   soundFiles.forEach(function(sound) {
-    // Extract the file name by removing the directory path and '.mp3' extension
-    var soundName = sound.substring(sound.lastIndexOf('/') + 1).replace('.mp3', '');
+    var soundPath = 'Media/Fun Projects/Soundboard/' + sound; // Create full path from JSON
 
-    // Replace dashes with spaces and convert to uppercase
-    var formattedName = soundName.replace(/-/g, ' ').toUpperCase();
+    // Extract the file name by removing the directory path and '.mp3' extension
+    var soundName = sound.replace('.mp3', '').replace(/-/g, ' ').toUpperCase();
 
     // Create a new button element
     var button = document.createElement('button');
-    button.innerText = formattedName; // Set the button text to the formatted name
+    button.innerText = soundName;
 
     // Add an event listener to play the sound when the button is clicked
     button.addEventListener('click', function() {
-      if (!playingSounds[sound]) { // Check if the sound is already playing
-        var audio = new Audio(sound);
-        playingSounds[sound] = audio; // Store the currently playing audio
+      if (!playingSounds[soundPath]) {  // Check if the sound is already playing
+        var audio = new Audio(soundPath);
+        playingSounds[soundPath] = audio;
         audio.play();
 
         // When the audio ends, remove it from the playingSounds object
         audio.addEventListener('ended', function() {
-          delete playingSounds[sound];
+          delete playingSounds[soundPath];
         });
       }
     });
@@ -50,9 +53,9 @@ function createSoundButtons() {
 function stopAllSounds() {
   for (var sound in playingSounds) {
     if (playingSounds[sound]) {
-      playingSounds[sound].pause(); // Pause the sound
-      playingSounds[sound].currentTime = 0; // Reset the sound to the beginning
-      delete playingSounds[sound]; // Remove from the playingSounds object
+      playingSounds[sound].pause();
+      playingSounds[sound].currentTime = 0;  // Reset sound to the beginning
+      delete playingSounds[sound];
     }
   }
 }
@@ -65,9 +68,10 @@ function createStopAllButton() {
     return;
   }
 
+  // Create the stop button element
   var stopButton = document.createElement('button');
   stopButton.innerText = 'Stop All Sounds';
-  stopButton.style.marginTop = '20px'; // Add some space above the button
+  stopButton.style.marginTop = '20px';  // Add some space above the button
 
   // Add event listener to stop all sounds
   stopButton.addEventListener('click', stopAllSounds);
@@ -75,7 +79,3 @@ function createStopAllButton() {
   // Append the button to the soundboard section
   soundboard.appendChild(stopButton);
 }
-
-// Call the functions to create the buttons and stop all button when the page loads
-createSoundButtons();
-createStopAllButton();
