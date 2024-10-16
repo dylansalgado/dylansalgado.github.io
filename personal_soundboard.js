@@ -68,14 +68,23 @@ function createStopAllButton() {
     return;
   }
 
+  // Create a wrapper for the stop button
+  var stopButtonContainer = document.createElement('div');
+  stopButtonContainer.style.textAlign = 'center';  // Center the button
+
   // Create the stop button element
   var stopButton = document.createElement('button');
   stopButton.innerText = 'Stop All Sounds';
   stopButton.style.marginTop = '20px';  // Add some space above the button
+  stopButton.style.backgroundColor = 'red'; // Set button color to red
+  stopButton.style.color = 'white'; // Set text color to white
 
   // Add event listener to stop all sounds
   stopButton.addEventListener('click', stopAllSounds);
 
-  // Append the button to the soundboard section
-  soundboard.appendChild(stopButton);
+  // Append the stop button to the container
+  stopButtonContainer.appendChild(stopButton);
+
+  // Append the container to the soundboard section
+  soundboard.appendChild(stopButtonContainer);
 }
