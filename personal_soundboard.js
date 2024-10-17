@@ -70,10 +70,12 @@ function createStopAllButton() {
 
   // Create a wrapper for the stop button
   var stopButtonContainer = document.createElement('div');
-  stopButtonContainer.style.textAlign = 'center';  // Center the button
+  stopButtonContainer.className = 'stop-button-container';
 
   // Create the stop button element
   var stopButton = document.createElement('button');
+  stopButton.innerText = 'Stop All Sounds';
+  stopButton.className = 'stop';
 
   // Add event listener to stop all sounds
   stopButton.addEventListener('click', stopAllSounds);
